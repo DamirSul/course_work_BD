@@ -52,28 +52,20 @@
 ## Порядок развертывания, настройки и запуска проекта локально:
 1. Заполнить файл .env по примеру:
 ```
-TOKEN=TG_BOT_TOKEN
-APP_TITLE='Сервис найма'
-APP_SECRET=secret
+APP_TITLE=Сервис найма
+APP_SECRET=SECRET
 APP_DB_HOST=localhost
 APP_DB_PORT=5432
 APP_DB_NAME=recruitment_service
-APP_DB_USER=admin
-APP_DB_PASSWORD=password
-APP_DATABASE_URL=sqlite+aiosqlite:///../src/recruitment_service.db
-APP_POSTGRES_URL=postgresql+asyncpg://{}:{}@{}:{}/{}
-APP_ENABLE_DOCS=true
-APP_DEBUG=true
-BOT_NAME=you_bot_name
-REDIS_URL=redis://<redis_container>:6379/0
-POSTGRES_USER=user
-POSTGRES_PASSWORD=password
-POSTGRES_DB=db_example
-FLOWER_URL=http://localhost:5555
+APP_DB_USER=postgres
+APP_DB_PASSWORD=postgres
+APP_DATABASE_URL=postgresql+asyncpg:///recruitment_service.db
+TOKEN=
+
 ```
 2. Склонировать репозиторий и перейти в директорию проекта.
 ```bash
-git@github.com:Studio-Yandex-Practicum/recruit_service_team_2.git
+git clone https://github.com/DamirSul/course_work_BD.git
 cd recruit_service_team_2
 ```
 3. Развернуть и активировать виртуальное окружение.
@@ -90,19 +82,9 @@ cd src
 pip install -r requirements.txt
 ```
 
-5. Перейти в директорию infra и развернуть контейнеры.
+5. Применение миграций в контейнере recruit-service-back.
 
 ```bash
-cd ..
-cd infra
-docker compose -f docker-compose.prod.yml up -d(при запуске на сервере) 
-docker compose -f docker-compose.dev.yml up -d(при разработке)
-```
-
-6. Применение миграций в контейнере recruit-service-back.
-
-```bash
-docker exec -it recruit-service-backend bash
 alembic upgrade head
 ```
 
@@ -113,10 +95,4 @@ python cli.py --username username --tg-id your_tg_id --tg-username tg_username -
 ```
 
 ## Команда проекта:
-- [тимлид Роман Баньков](https://github.com/BulkaInside)
-- [Артем Козлов](https://github.com/arteick)
-- [Ольга Богданова](https://github.com/pitbul892)
-- [Герман Деев](https://github.com/germynic31)
 - [Дамир Сулейменов](https://github.com/DamirSul)
-- [Артур Ачкасов](https://github.com/ArturAchkasov/)
-- [Андрей Черепанов](https://github.com/skullikk) 
