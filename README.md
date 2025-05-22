@@ -50,7 +50,14 @@
   ```
 
 ## Порядок развертывания, настройки и запуска проекта локально:
-1. Заполнить файл .env по примеру:
+
+1. Склонировать репозиторий и перейти в директорию проекта.
+```bash
+git clone https://github.com/DamirSul/course_work_BD.git
+cd recruit_service_team_2
+```
+
+1. Создать в src и заполнить файл .env по примеру:
 ```
 APP_TITLE=Сервис найма
 APP_SECRET=SECRET
@@ -63,11 +70,7 @@ APP_DATABASE_URL=postgresql+asyncpg:///recruitment_service.db
 TOKEN=
 
 ```
-2. Склонировать репозиторий и перейти в директорию проекта.
-```bash
-git clone https://github.com/DamirSul/course_work_BD.git
-cd recruit_service_team_2
-```
+
 3. Развернуть и активировать виртуальное окружение.
 
 ```bash
