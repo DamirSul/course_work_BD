@@ -1,4 +1,4 @@
-# Сервис Найма для сотрудников Яндекс Практикума
+# Корпоративный Сервис Найма
 
 ## Цели и задачи проекта:
 Разработка Telegram-бота для автоматизации работы сотрудников Сервиса найма.
@@ -82,16 +82,21 @@ cd src
 pip install -r requirements.txt
 ```
 
-5. Применение миграций в контейнере recruit-service-back.
+5. Применение миграций
 
 ```bash
 alembic upgrade head
 ```
 
-7. Создание суперадмина.
-В этом же контейнере выполнить команду со своими данными
+6. Создание суперадмина.
+Из директории src:
 ```bash
 python cli.py --username username --tg-id your_tg_id --tg-username tg_username --birth-date your_birth_date --email yourmail@mail.com --phone +79999998844 --password password -d
+```
+6. Запуск проекта.
+```bash
+Uvicorn: из директории src: uvicorn main:app --reload
+telegram-bot: из директории src/bot_v2: python main.py
 ```
 
 ## Команда проекта:
