@@ -1,0 +1,353 @@
+{
+    "companies": [
+      {
+        "name": "Яндекс",
+        "location": "Москва",
+        "manager_first_name": "Олег",
+        "manager_last_name": "Иванов",
+        "manager_phone": "+77777777777"
+      },
+      {
+        "name": "Озон",
+        "location": "Москва",
+        "manager_first_name": "Михаил",
+        "manager_last_name": "Клопов",
+        "manager_phone": "+77777777777"
+      },
+      {
+        "name": "Apple",
+        "location": "Cupertino, CA",
+        "manager_first_name": "Johnny",
+        "manager_last_name": "Depp",
+        "manager_phone": "+77777777777"
+      },
+      {
+        "name": "ВКонтакте",
+        "location": "Санкт-Петербург",
+        "manager_first_name": "Павел",
+        "manager_last_name": "Дуров",
+        "manager_phone": "+77777777777"
+      },
+      {
+        "name": "Тинькофф",
+        "location": "Москва",
+        "manager_first_name": "Олег",
+        "manager_last_name": "Тиньков",
+        "manager_phone": "+77777777777"
+      },
+      {
+        "name": "Сбер",
+        "location": "Москва",
+        "manager_first_name": "Анджелина",
+        "manager_last_name": "Джоли",
+        "manager_phone": "+77777777777"
+      },
+      {
+        "name": "Рамблер",
+        "location": "Москва",
+        "manager_first_name": "Алексей",
+        "manager_last_name": "Чернышев",
+        "manager_phone": "+77777777777"
+      },
+      {
+        "name": "Mail.ru",
+        "location": "Москва",
+        "manager_first_name": "Дмитрий",
+        "manager_last_name": "Песков",
+        "manager_phone": "+77777777777"
+      }
+
+    ],
+    "congratulations": [
+      {
+        "message": "Happy Birthday! 🎉",
+        "is_active": false,
+        "format_type": "markdown"
+      },
+      {
+        "message": "<b>{name}!\n</b> Поздравляем тебя с <i>Днем Рождения</i>!\n Желаем счастья, здоровья и успехов во всем! <u>\nС наилучшими пожеланиями</u>!",
+        "is_active": true,
+        "format_type": "html"
+      },
+      {
+        "message": "*Поздравляем, {name}!* 🎉\n_С Днём Рождения_ Желаем счастья, здоровья и успехов\n__Пусть мечты сбываются__!",
+        "is_active": true,
+        "format_type": "markdown"
+      }
+
+    ],
+    "images": [
+      {
+        "url": "/static/uploads/photo1.jpg",
+        "description": "Гарфилд"
+      },
+      {
+        "url": "/static/uploads/photo2.jpg",
+        "description": "Торт"
+      },
+      {
+        "url": "/static/uploads/photo3.jpg",
+        "description": "Миньоны"
+      },
+      {
+        "url": "/static/uploads/photo4.jpg",
+        "description": "Торт с коллегами"
+      },
+      {
+        "url": "/static/uploads/photo5.png",
+        "description": "Веселые коллеги"
+      }
+
+    ],
+    "stopwords": [
+      {
+        "word": "python",
+        "language": "en",
+        "category": "key"
+      },
+      {
+        "word": "пайтон",
+        "language": "ru",
+        "category": "key"
+      },
+      {
+        "word": "test",
+        "language": "en",
+        "category": "stop"
+      },
+      {
+        "word": "тест",
+        "language": "ru",
+        "category": "key"
+      },
+      {
+        "word": "питон",
+        "language": "ru",
+        "category": "key"
+      }
+    ],
+    "users": [
+
+      {
+        "username": "ivanova_olga",
+        "first_name": "Ольга",
+        "last_name": "Иванова",
+        "tg_id": 628595727,
+        "position": "Менеджер",
+        "department": "Продажи",
+        "tg_username": "@Olisolis",
+        "birth_date": "1990-03-04",
+        "role": "admin",
+        "email": "olga.b@example.com",
+        "phone": "+79161234567",
+        "password_hash": "hash123"
+      },
+      {
+        "username": "koperic",
+        "first_name": "Роман",
+        "last_name": "Смирнов",
+        "tg_id": 346423046,
+        "position": "Разработчик",
+        "department": "IT",
+        "tg_username": "@Koperic",
+        "birth_date": "1987-03-07",
+        "role": "user",
+        "email": "roman.k@example.com",
+        "phone": "+79161234568",
+        "password_hash": "hash234"
+      },
+      {
+        "username": "ivanov_1",
+        "first_name": "Андрей",
+        "last_name": "Иванов",
+        "tg_id": 123456789,
+        "position": "Экономист",
+        "department": "Финансы",
+        "tg_username": "@ivan1",
+        "birth_date": "1995-03-07",
+        "role": "user",
+        "email": "ivan1@example.com",
+        "phone": "+79161234569",
+        "password_hash": "hash345"
+      },
+      {
+        "username": "ivanov_2",
+        "first_name": "Максим",
+        "last_name": "Иванов",
+        "tg_id": 987654321,
+        "position": "Аналитик",
+        "department": "Финансы",
+        "tg_username": "@ivan2",
+        "birth_date": "1998-06-21",
+        "role": "user",
+        "email": "ivan2@example.com",
+        "phone": "+79161234570",
+        "password_hash": "hash456"
+      },
+      {
+        "username": "ivanov_3",
+        "first_name": "Иван",
+        "last_name": "Иванов",
+        "tg_id": 192837465,
+        "position": "Менеджер",
+        "department": "Продажи",
+        "tg_username": "@ivan3",
+        "birth_date": "1992-11-30",
+        "role": "user",
+        "email": "ivan3@example.com",
+        "phone": "+79161234571",
+        "password_hash": "hash567"
+      },
+      {
+        "username": "smirnov_1",
+        "first_name": "Алексей",
+        "last_name": "Смирнов",
+        "tg_id": 293847561,
+        "position": "Инженер",
+        "department": "Производственный отдел",
+        "tg_username": "@smir1",
+        "birth_date": "1991-07-07",
+        "role": "user",
+        "email": "smir1@example.com",
+        "phone": "+79161234572",
+        "password_hash": "hash678"
+      },
+      {
+        "username": "smirnov_2",
+        "first_name": "Дмитрий",
+        "last_name": "Смирнов",
+        "tg_id": 567891234,
+        "position": "Инженер",
+        "department": "Производство",
+        "tg_username": "@smir2",
+        "birth_date": "1993-09-09",
+        "role": "user",
+        "email": "smir2@example.com",
+        "phone": "+79161234573",
+        "password_hash": "hash789"
+      },
+      {
+        "username": "smirnov_3",
+        "first_name": "Мария",
+        "last_name": "Смирнова",
+        "tg_id": 678912345,
+        "position": "HR",
+        "department": "Кадры",
+        "tg_username": "@smir3",
+        "birth_date": "1994-12-12",
+        "role": "user",
+        "email": "smir3@example.com",
+        "phone": "+79161234574",
+        "password_hash": "hash890"
+      },
+      {
+        "username": "smirnov_4",
+        "first_name": "Елена",
+        "last_name": "Смирнова",
+        "tg_id": 789123456,
+        "position": "HR",
+        "department": "Кадры",
+        "tg_username": "@smir4",
+        "birth_date": "1996-02-28",
+        "role": "user",
+        "email": "smir4@example.com",
+        "phone": "+79161234575",
+        "password_hash": "hash901"
+      },
+      {
+        "username": "petrov",
+        "first_name": "Пётр",
+        "last_name": "Петров",
+        "tg_id": 890123456,
+        "position": "Дизайнер",
+        "department": "Маркетинг",
+        "tg_username": "@petrov",
+        "birth_date": "1990-04-14",
+        "role": "user",
+        "email": "petrov@example.com",
+        "phone": "+79161234576",
+        "password_hash": "hash012"
+      },
+      {
+        "username": "artur_achkasov",
+        "first_name": "Артур",
+        "last_name": "Ачкасов",
+        "tg_id": 162889440,
+        "position": "Дизайнер",
+        "department": "Маркетинг",
+        "tg_username": "@arthur_twizard",
+        "birth_date": "1990-04-14",
+        "role": "user",
+        "email": "petrov@example.com",
+        "phone": "+79161234576",
+        "password_hash": "hash0228"
+      },
+      {
+        "username": "roman",
+        "first_name": "roman",
+        "last_name": "roman",
+        "tg_id": 299645305,
+        "position": "Дизайнер",
+        "department": "Маркетинг",
+        "tg_username": "@roman",
+        "birth_date": "1990-04-14",
+        "role": "admin",
+        "email": "roman@example.com",
+        "phone": "+79161234576",
+        "password_hash": "hash012"
+      }
+
+    ]
+    ,
+    
+    "vacancies": [
+      {
+        "position": "Senior Developer",
+        "description": "Looking for experienced developer",
+        "company_id": 1
+      },
+      {
+        "position": "Product Manager",
+        "description": "Manage product lifecycle",
+        "company_id": 2
+      }
+    ],
+    "registration_tokens": [
+      { 
+        "id": "1",
+        "token": "admin",
+        "expires_at": "2026-10-05",
+        "used": true,
+        "created_by": 1,
+        "target_user_email": "admin@admin.com",
+        "tg_id": 1
+      },
+      {
+        "id": "2",
+        "token": "Test_token_1",
+        "expires_at": "2023-10-05",
+        "used": false,
+        "created_by": 1,
+        "target_user_email": "olga.b@example.com",
+        "tg_id": 162889440
+      },
+      {
+        "id": "3",
+        "token": "Test_token_2",
+        "expires_at": "2025-10-05",
+        "used": true,
+        "created_by": 1,
+        "target_user_email": "olga.b@example.com",
+        "tg_id": 162889440
+      },
+      {
+        "id": "4",
+        "token": "Test_token_3",
+        "expires_at": "2025-10-05",
+        "used": false,
+        "created_by": 1,
+        "target_user_email": "olga.b@example.com",
+        "tg_id": 162889440
+      }
+    ]
+  }

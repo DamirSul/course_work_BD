@@ -1,0 +1,100 @@
+volumes:
+  pg_data:
+  shared_backend:
+
+services:
+
+  db:
+    container_name: recruit-service-db
+    image: postgres:latest
+    env_file: ../.env
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  
+  redis:
+    container_name: recruit-service-redis
+    image: redis:alpine
+
+  backend:
+    depends_on:
+      - db
+    container_name: recruit-service-backend
+    build:
+      context: ../src/
+      dockerfile: backend.Dockerfile
+    env_file: ../.env
+    volumes:
+      - shared_backend:/app/backend
+  
+  bot:
+    container_name: recruit-service-bot
+    depends_on:
+      - db
+      - backend
+      - redis
+    build:
+      context: ../src/
+      dockerfile: bot.Dockerfile
+    env_file: ../.env
+    environment:
+      PYTHONPATH: "/src"
+    volumes:
+      - shared_backend:/src/backend
+  
+  celery_worker:
+    container_name: recruit-service-celery-worker
+    depends_on:
+      - redis
+    env_file: ../.env
+    build:
+      context: ../src/
+      dockerfile: celery_worker.Dockerfile
+    environment:
+      PYTHONPATH: "/src"
+    volumes:
+      - shared_backend:/src/backend
+
+  celery_beat:
+    container_name: recruit-service-celery-beat
+    depends_on:
+      - redis
+      - celery_worker
+    env_file: ../.env
+    build:
+      context: ../src/
+      dockerfile: celery_beat.Dockerfile
+    environment:
+      PYTHONPATH: "/src"
+    volumes:
+      - shared_backend:/src/backend
+
+
+  flower:
+    container_name: recruit-service-flower
+    depends_on:
+      - redis
+      - celery_worker
+      - celery_beat
+    env_file: ../.env
+    build:
+      context: ../src/
+      dockerfile: flower.Dockerfile
+    environment:
+      PYTHONPATH: "/src"
+    volumes:
+      - shared_backend:/src/backend
+    ports:
+      - "5555:5555"
+
+  nginx:
+    depends_on:
+      - db
+      - backend
+      - bot
+    container_name: recruit-service-gateway
+    build: nginx/
+    env_file: ../.env
+    ports:
+      - "8000:80"
